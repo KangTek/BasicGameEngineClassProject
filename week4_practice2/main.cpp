@@ -98,7 +98,10 @@ int main(int lashiren, char **chishiren)
 	Hero* hero = new Hero();
 	hero->setAnimation(&anim1);
 	hero->setRenderer(renderer);
-	hero->setXY(30,200);
+	
+	//build vector to represent starting position for hero
+	Vector heroStartPos(200,200);
+	hero->setPosition(heroStartPos);
 	//add our hero to the list
 	entities.push_back(hero);
 
@@ -140,6 +143,44 @@ int main(int lashiren, char **chishiren)
 
 		anim6.draw(400, 150, 0.5f);
 		*/
+
+		//DEAL WITH USER INPUT
+		//we check what kind of user input events have happened since our last check
+		SDL_Event e;
+		//loops through all events and temporarily stores event details in an SDL_EVENT object
+		while (SDL_PollEvent(&e))
+		{
+			//check if user has clicked on the close window button
+			if (e.type == SDL_QUIT)
+			{
+				//exit our loop
+				loop = false;
+			}
+			//check if user has 'pressed' a button(not held)
+			if (e.type == SDL_KEYDOWN)
+			{
+				//see if ESC key was pressed
+				if (e.key.keysym.scancode == SDL_SCANCODE_ESCAPE)
+				{
+					//exit loop
+					loop = false;
+				}
+			}
+			if (e.key.keysym.scancode == SDL_SCANCODE_UP)
+			{
+				//tell hero to move up now
+				Vector heroVelocity = hero->getVelocity();
+				heroVelocity.y = -300;
+				hero->setVelocity(heroVelocity);
+			}
+			if (e.key.keysym.scancode == SDL_SCANCODE_DOWN)
+			{
+				//tell hero to move down now
+				Vector heroVelocity = hero->getVelocity();
+				heroVelocity.y = 300;
+				hero->setVelocity(heroVelocity);
+			}
+		}
 		for (list<Entity*>::iterator eIt = entities.begin(); eIt != entities.end(); eIt++)
 		{
 			(*eIt)->update(DT);
@@ -161,9 +202,10 @@ int main(int lashiren, char **chishiren)
 
 
 		SDL_RenderPresent(renderer);
-
+		/*
 		if (SDL_GetTicks() > 5000)
-			loop = false;
+		loop = false;
+		*/
 	}
 
 

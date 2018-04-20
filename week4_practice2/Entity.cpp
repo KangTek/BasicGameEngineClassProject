@@ -15,23 +15,33 @@ void Entity::setRenderer(SDL_Renderer* renderer)
 {
 	this->renderer = renderer;
 }
-void Entity::setXY(int x, int y)
+Vector Entity::getPosition()
 {
-	this->x = x;
-	this->y = y;
+	return pos;
 }
-float Entity::getX()
+void Entity::setPosition(Vector pos)
 {
-	return x;
+	this->pos = pos;
 }
-float Entity::getY()
+Vector Entity::getVelocity()
 {
-	return y;
+	return velocity;
+}
+void Entity::setVelocity(Vector Velocity)
+{
+	this->velocity = Velocity;
 }
 
 void Entity::update(float dt)
 {
 	//do nothing, usless subclasses do something with it
+
+	updateMovement(dt);
+}
+void Entity::updateMovement(float dt)
+{
+	pos.x = pos.x + velocity.x * dt;
+	pos.y = pos.y + velocity.y * dt;
 }
 void Entity::draw()
 {

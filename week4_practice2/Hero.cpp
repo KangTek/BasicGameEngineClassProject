@@ -18,21 +18,25 @@ void Hero::update(float dt)
 {
 	if (faceRight)
 	{
-		x += dt * 800;
+		velocity.x = 700;
 	}
 	else
 	{
-		x -= dt * 800;
+		velocity.x = -700;
 	}
 
-	if (x > 640)
+	//turn around if at edges of our screen
+	if (pos.x > 640)
 	{
 		faceRight = false;
 	}
-	if (x <= 0)
+	if (pos.x <= 0)
 	{
 		faceRight = true;
 	}
+
+	//use basic entity moment to move around
+	updateMovement(dt);
 	//update animations too
 	animation->update(dt);
 }
@@ -42,9 +46,9 @@ void Hero::draw()
 	{
 		if (faceRight)
 		{
-			animation->draw(x, y);
+			animation->draw(pos.x, pos.y);
 		}
 		else
-			animation->draw(x,y,true);
+			animation->draw(pos.x,pos.y,true);
 	}
 }

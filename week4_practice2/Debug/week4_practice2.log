@@ -1,34 +1,23 @@
-﻿Build started 20/04/2018 9:52:07 AM.
+﻿Build started 20/04/2018 12:16:58 PM.
      1>Project "D:\Users\6651\Downloads\week4_practice2\week4_practice2\week4_practice2.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Animation.cpp Entity.cpp Hero.cpp main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
      1>d:\users\6651\downloads\week4_practice2\week4_practice2\main.cpp(86): warning C4305: 'argument' : truncation from 'double' to 'float'
      1>d:\users\6651\downloads\week4_practice2\week4_practice2\main.cpp(87): warning C4305: 'argument' : truncation from 'double' to 'float'
      1>d:\users\6651\downloads\week4_practice2\week4_practice2\main.cpp(88): warning C4305: 'argument' : truncation from 'double' to 'float'
      1>d:\users\6651\downloads\week4_practice2\week4_practice2\main.cpp(90): warning C4305: 'argument' : truncation from 'double' to 'float'
      1>d:\users\6651\downloads\week4_practice2\week4_practice2\main.cpp(92): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>d:\users\6651\downloads\week4_practice2\week4_practice2\main.cpp(112): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-         Hero.cpp
-     1>d:\users\6651\downloads\week4_practice2\week4_practice2\hero.cpp(45): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>d:\users\6651\downloads\week4_practice2\week4_practice2\hero.cpp(48): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-         Entity.cpp
-     1>d:\users\6651\downloads\week4_practice2\week4_practice2\entity.cpp(20): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>d:\users\6651\downloads\week4_practice2\week4_practice2\entity.cpp(21): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-         Animation.cpp
-     1>d:\users\6651\downloads\week4_practice2\week4_practice2\animation.cpp(54): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>d:\users\6651\downloads\week4_practice2\week4_practice2\animation.cpp(85): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-         Generating Code...
+     1>d:\users\6651\downloads\week4_practice2\week4_practice2\main.cpp(115): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\6651\Downloads\week4_practice2\Debug\week4_practice2.exe" /INCREMENTAL /NOLOGO SDL2.lib SDL2main.lib SDL2_image.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Users\6651\Downloads\week4_practice2\Debug\week4_practice2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\6651\Downloads\week4_practice2\Debug\week4_practice2.lib" /MACHINE:X86 Debug\Animation.obj
          Debug\Entity.obj
          Debug\Hero.obj
          Debug\main.obj
-         LINK : D:\Users\6651\Downloads\week4_practice2\Debug\week4_practice2.exe not found or not built by the last incremental link; performing full link
-     1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+         Debug\Vector.obj
          week4_practice2.vcxproj -> D:\Users\6651\Downloads\week4_practice2\Debug\week4_practice2.exe
      1>Done Building Project "D:\Users\6651\Downloads\week4_practice2\week4_practice2\week4_practice2.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.51
+Time Elapsed 00:00:01.26
